@@ -1,50 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
     <data>
         <variable
             name="isFish"
             type="com.example.fishing.FishData" />
     </data>
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-        <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/fishName"
+            android:layout_width="409dp"
+            android:layout_height="729dp"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="35dp"
-                android:text="@{isFish.title}"/>
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/fishImageReal"
-                android:layout_width="393dp"
-                android:layout_height="166dp"
-                android:imageUrl="@{isFish.imageReal}" />
+                <TextView
+                    android:id="@+id/fishName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{isFish.title}"
+                    android:textSize="35sp" />
 
-            <ImageView
-                android:id="@+id/fishImageMap"
-                android:layout_width="397dp"
-                android:layout_height="392dp"
-                android:imageUrl="@{isFish.imageMap}" />
+                <ImageView
+                    android:id="@+id/fishImageReal"
+                    android:layout_width="match_parent"
+                    android:layout_height="103dp"
+                    android:imageUrl="@{isFish.imageReal}" />
 
-        </LinearLayout>
-    </ScrollView>
-    </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fishKnowledgeTitle"
+                    android:layout_width="386dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{isFish.generalKnowledgeTitle}"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fishKnowledgeInfo"
+                        android:layout_width="192dp"
+                        android:layout_height="match_parent"
+                        android:text="@{isFish.generalKnowledgeInfo}"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/fishImageMap"
+                        android:layout_width="214dp"
+                        android:layout_height="match_parent"
+                        android:imageUrl="@{isFish.imageMap}" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fishFishingTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.fishingTitle}"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/fishSpringTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.springTitle}"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/fishSpringInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.springInfo}"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/fishSummerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.summerTitle}"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/fishSummerInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.summerInfo}"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/fishFallTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.fallTitle}"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/fishFallInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.fallInfo}"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/fishWinterTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.winterTitle}"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/fishWinterInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.winterInfo}"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/fishEquipmentTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.equipmentTitle}"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/fishEquipmentInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.equipmentInfo}"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/fishWarningsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.warningsTitle}"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/fishWarningsInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{isFish.warningsInfo}"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

@@ -34,13 +34,48 @@ class FishAdapter(
         val newList = fishList[position]
         holder.v.isFish = fishList[position]
         holder.v.root.setOnClickListener(){
+
             val imageReal = newList.imageReal
-            val title = newList.title
             val imageMap = newList.imageMap
+            val title = newList.title
+            val generalKnowledgeTitle = newList.generalKnowledgeTitle
+            val generalKnowledgeInfo = newList.generalKnowledgeInfo
+            val fishingTitle = newList.fishingTitle
+            val springTitle = newList.springTitle
+            val springInfo = newList.springInfo
+            var summerTitle = newList.summerTitle
+            val summerInfo = newList.summerInfo
+            val fallTitle = newList.fallTitle
+            val fallInfo = newList.fallInfo
+            val winterTitle = newList.winterTitle
+            val winterInfo = newList.winterInfo
+            val equipmentTitle =newList.equipmentTitle
+            val equipmentInfo = newList.equipmentInfo
+            val warningsTitle = newList.warningsTitle
+            val warningsInfo = newList.warningsInfo
+
+
             val mIntent = Intent(c,SecondActivity::class.java)
             mIntent.putExtra("imageReal", imageReal)
             mIntent.putExtra("imageMap",imageMap)
             mIntent.putExtra("title", title)
+            mIntent.putExtra("generalKnowledgeTitle", generalKnowledgeTitle)
+            mIntent.putExtra("generalKnowledgeInfo", generalKnowledgeInfo)
+            mIntent.putExtra("fishingTitle", fishingTitle)
+            mIntent.putExtra("springTitle", springTitle)
+            mIntent.putExtra("springInfo", springInfo)
+            mIntent.putExtra("summerTitle", summerTitle)
+            mIntent.putExtra("summerInfo", summerInfo)
+            mIntent.putExtra("fallTitle", fallTitle)
+            mIntent.putExtra("fallInfo", fallInfo)
+            mIntent.putExtra("winterTitle", winterTitle)
+            mIntent.putExtra("winterInfo", winterInfo)
+            mIntent.putExtra("equipmentTitle", equipmentTitle)
+            mIntent.putExtra("equipmentInfo", equipmentInfo)
+            mIntent.putExtra("warningsTitle", warningsTitle)
+            mIntent.putExtra("warningsInfo", warningsInfo)
+
+
             c.startActivity(mIntent)
 
         }

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:background="@drawable/gradient"
+    >
     <data>
         <variable
             name="isFish"
@@ -8,32 +13,35 @@
 
 
     </data>
-<androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
 
         <ImageView
+
             android:id="@+id/fishImg"
-            android:imageUrl="@{isFish.image}"
-            android:layout_height="150dp"
             android:layout_width="match_parent"
+            android:layout_height="145dp"
             android:layout_marginTop="35dp"
+            android:imageUrl="@{isFish.image}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
-/>
+            />
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
 </layout>
